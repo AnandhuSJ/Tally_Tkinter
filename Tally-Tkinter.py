@@ -360,3 +360,94 @@ def create():
 
     name6 = Label(top, text = "Rate Of Duty (eg 5)",fg='black',bg='white').place(x = 625,y = 410,width=120)
     e5 = Entry(top,fg='black',bg='#ffeb7d').place(x = 870, y = 410,width=200,height=30)
+
+
+
+
+
+
+def item_values():
+    
+    global item_nm
+    item_nm=Frame(Canvas1,height=200,width=1308,bg="white",relief=RAISED,bd=2)
+
+    item_nm.place(x=0,y=21)
+    lb1=Label(item_nm,text="Stock Item:",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    lb1.place(x=0,y=0,anchor="nw")
+    lb2=Label(item_nm,text="Item Name",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    lb2.place(x=80,y=0,anchor="nw")
+    lb3=Label(item_nm,text="Inwards under ledger:",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    lb3.place(x=0,y=20,anchor="nw")
+    lb4=Label(item_nm,text="Item Name",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    lb4.place(x=150,y=20,anchor="nw")
+    lb5=Label(item_nm,text="for apr-10-22",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    lb5.place(x=1200,y=0,anchor="nw")
+    
+
+
+
+    global item_val
+    item_val=Frame(Canvas1,bg="white",relief=RAISED,bd=2)
+    item_val.place(x=0,y=70,width=1308,height=650)
+    global tree
+    tree = ttk.Treeview(item_val, column=("c1", "c2", "c3","c4", "c5", "c6","c7", "c8"), show='headings', height=650)
+
+    tree.column("#1", anchor=tk.CENTER,width=50)
+
+    tree.heading("#1", text="Date")
+
+    tree.column("#2", anchor=tk.CENTER,width=830)
+
+    tree.heading("#2", text="Perticulars")
+
+    tree.column("#3", anchor=tk.CENTER,width=70)
+
+    tree.heading("#3", text="Quantity")
+
+    tree.column("#4", anchor=tk.CENTER,width=70)
+
+    tree.heading("#4", text="Basic Rate")
+
+    tree.column("#5", anchor=tk.CENTER,width=70)
+
+    tree.heading("#5", text="Basic value")
+
+    tree.column("#6", anchor=tk.CENTER,width=70)
+
+    tree.heading("#6", text="Added cost")
+
+    tree.column("#7", anchor=tk.CENTER,width=70)
+
+    tree.heading("#7", text="Total value")
+
+    tree.column("#8", anchor=tk.CENTER,width=70)
+
+    tree.heading("#8", text="Eff.rate")
+    tree.pack()
+    tree.bind("<Double-1>",OnDoubleClick)
+    
+
+
+
+
+    horizontal =Frame(item_val, bg='white', height=100,width=1308)
+    horizontal.place(x=0, y=520)
+    horizontal1 =Frame(item_val, bg='black', height=1,width=1308)
+    horizontal1.place(x=0, y=520)
+    horizontal1 =Frame(item_val, bg='black', height=1,width=1308)
+    horizontal1.place(x=0, y=545)
+    l4f6=Label(horizontal,text="Total",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    l4f6.place(x=0,y=5,anchor="nw")
+
+    l4f11=Label(horizontal,text="10 Nos",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    l4f11.place(x=900,y=5,anchor="nw")
+    l4f10=Label(horizontal,text="10",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    l4f10.place(x=1000,y=5,anchor="nw")
+    l4f9=Label(horizontal,text="10",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    l4f9.place(x=1060,y=5,anchor="nw")
+    l4f8=Label(horizontal,text="100",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    l4f8.place(x=1130,y=5,anchor="nw")
+    l4f7=Label(horizontal,text="1000",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    l4f7.place(x=1190,y=5,anchor="nw")
+    l4f8=Label(horizontal,text="10000",font=("times new roman",12,"bold"),bg="white",fg="black",borderwidth=0)
+    l4f8.place(x=1250,y=5,anchor="nw")   
